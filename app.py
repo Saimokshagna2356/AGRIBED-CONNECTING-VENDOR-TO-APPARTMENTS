@@ -3,6 +3,8 @@ from routes.auth_routes import auth_bp
 from routes.product_routes import product_bp   # 👈 ADD THIS
 from routes.cart_routes import cart_bp
 from routes.order_routes import order_bp
+from routes.payment_routes import payment_bp
+
 
 app = Flask(__name__)
 
@@ -11,6 +13,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(product_bp)   # 👈 ADD THIS
 app.register_blueprint(cart_bp)
 app.register_blueprint(order_bp)
+app.register_blueprint(payment_bp)
 
 @app.route("/")
 def home():

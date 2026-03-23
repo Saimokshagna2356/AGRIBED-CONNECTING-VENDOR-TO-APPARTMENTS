@@ -1,4 +1,5 @@
 import mysql.connector
+from config import Config
 
 def get_db_connection():
     try:
@@ -9,6 +10,7 @@ def get_db_connection():
             database="agribed"
         )
         return connection
+
     except Exception as e:
-        print("Database connection error:", e)
+        print("DB not connected:", e)
         return None
